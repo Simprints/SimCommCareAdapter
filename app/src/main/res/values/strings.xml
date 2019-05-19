@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SimCommCareAdapter</string>
+    <string name="failed_confirmation">Confirmation Failed, Please contact your admin.</string>
+</resources>
