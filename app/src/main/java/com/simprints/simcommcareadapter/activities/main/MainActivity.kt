@@ -14,7 +14,7 @@ import com.simprints.simcommcareadapter.activities.main.MainViewModel.ReturnIden
 import com.simprints.simcommcareadapter.events.DataEventObserver
 import com.simprints.simcommcareadapter.events.EventObserver
 import org.jetbrains.anko.toast
-import org.koin.android.ext.android.inject
+import org.koin.android.viewmodel.ext.android.viewModel
 
 
 class MainActivity : AppCompatActivity(), MainContract.View {
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         private const val VERIFY_REQUEST_CODE = 99
     }
 
-    override val viewModel: MainViewModel by inject()
+    override val viewModel: MainViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

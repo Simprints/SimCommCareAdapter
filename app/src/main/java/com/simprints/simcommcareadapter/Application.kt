@@ -2,14 +2,20 @@ package com.simprints.simcommcareadapter
 
 import android.app.Application
 import com.simprints.simcommcareadapter.di.koinModules
-import org.koin.android.ext.android.startKoin
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
 
 
 class Application : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        startKoin(androidContext = this, modules = listOf(koinModules))
+        startKoin{
+            androidLogger()
+            androidContext(this@Application)
+            modules(koinModules)
+        }
     }
 
 }
